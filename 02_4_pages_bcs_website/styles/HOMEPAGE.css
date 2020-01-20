@@ -1,0 +1,52 @@
+body {margin: 0 ;
+   }
+
+.header {
+    height: 260px;
+}
+
+ h1{
+    position:absolute;
+    top: 100px;
+    left: 150px; 
+ }
+
+ option_bar{
+     
+    position: sticky;
+    top: 0px;
+ }
+
+ .card{
+    float:left;
+    width: 25%;
+    margin: 0 0 0 0;
+    text-align: center;
+    background-color:black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  
+
+ } 
+
+ .contact_info{
+     margin-left:135px;
+ }
+
+ .wrapper {
+     color:white;
+     background-color:black;
+ }
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  

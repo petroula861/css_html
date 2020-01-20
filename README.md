@@ -1,0 +1,1 @@
+Please move the folder with cloning projects outside of your main BCS_JS_BOOTCAMP_FILES folder since each cloning project would be a separate git and have it's own repo on gitlab so you would avoid nested git projects. 

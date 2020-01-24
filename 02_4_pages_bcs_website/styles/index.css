@@ -1,22 +1,45 @@
-body {margin: 0 ;
-   }
+* {
+	margin: 0;
+	padding:0;
+   box-sizing: border-box;
+   font-family: 'Blinker', sans-serif;
+   letter-spacing: 0px;
+ 
+}
+/*----------for screen bigger than 800px--------------------------------------------------------*/
 
+@media all and  (max-width: 800px){
+/*----------Index.html------------------------------------------*/
+/*------Header ----*/
 .header {
-    height: 260px;
+    height: 255px;
+    width:100%;
+    background-image:url(https://www.barcelonacodeschool.com/files/pics/cur_files/squares.svg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
 }
 
- h1{
-    position:absolute;
-    top: 100px;
-    left: 150px; 
+ .header h1 a{
+ position: absolute;
+   top:100px;
+    left: 10%;  
+    text-decoration: none;
+    color: black;
+    font-size: 0.8em;
+ } 
+
+ .fontbold{
+   font-weight: bold
  }
 
- option_bar{
-     
-    position: sticky;
-    top: 0px;
- }
+/*------navbar----*/
 
+
+.navbar{
+   position: sticky;
+   top: 0px;
+   z-index:2
+}
  .card{
     float:left;
     width: 25%;
@@ -24,29 +47,523 @@ body {margin: 0 ;
     text-align: center;
     background-color:black;
     position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    color:white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-  
-
+    padding-top: 15px;
+    padding-bottom: 15px; 
  } 
 
- .contact_info{
-     margin-left:135px;
+ .card a{    
+    text-decoration: none;
+   color:white;}
+
+
+/*------contact info ---------*/
+
+ .contact_info {
+     padding:0 10px 0 10px;
+     margin-top:80px;
+     margin-bottom:30px;
+     display:flex;
+     flex-direction: column;
+
+ 
+     
+ }
+ iframe{
+    width:100%
+ }
+ .rightpart_contactinfo{
+    width: 100%;
+    margin-top:5px
+ }
+ .contact_info p{
+    margin-bottom:25px;
+    color: black;
+ }
+ .contact_info p a{
+   color:rgba(14, 12, 12, 0.685);
+   margin-right: 5px;
+}
+.contact_info p:nth-of-type(3) a{
+   background-color: yellow;
+}
+
+.contact_info button{
+   padding:10px;
+   border:solid black 1px;
+   background-color:white
+}
+
+/*---------careeroptions AND differenecs ---------*/
+.careeroptions,.differences{
+
+   padding:80px 10px 40px 10px;
+   color: white;
+   background-color:black;
+}
+ .careeroptions-grid,.differences-grid {
+    margin:50px 0 20px 20px;
+     display:flex;
+     flex-direction:column;
+     justify-content: flex-start;
+     line-height: 2
+
+ }
+ .items h4{
+   padding-bottom:20px;
+   padding-top:20px
+ }
+ .items{
+   padding-right:2%;
  }
 
- .wrapper {
+ .careeroptions-grid p{
+    padding-bottom:20px
+ }
+/*--------study plan--------*/
+.studyplan{
+   padding:40px 10px 20px 10px;
+}
+
+
+.studyplan h3{
+   margin:10px 0 10px 0;
+   border-bottom:black 1px solid
+}
+.studyplan-grid{
+   margin-top:40px;
+   display: grid;
+   grid-template-rows: repeat(3,1fr);
+   grid-gap:15px;
+}
+.studyplan-grid .items{
+   box-shadow: -3px 3px #000;
+   border:1px solid rgba(14, 12, 12, 0.685);
+   padding:20px 20px 20px 20px;
+
+
+}
+.studyplan-subgrid {
+   display:grid;
+   grid-template-columns: repeat(2,minmax(auto,1fr));
+   
+
+}
+
+.studyplan-grid a{
+   color:rgba(14, 12, 12, 0.685);
+}
+.studyplan-grid p{
+   color:rgba(14, 12, 12, 0.685);
+}
+
+.sub-items *{
+   padding:10px 0 10px 0;
+}
+
+
+/*---------partners-------*/
+.partners{
+   padding:20px 10% 20px 10%;
+
+}
+.partners h4{
+   padding-bottom:40px
+
+}
+
+
+.partners img{
+   width:80px;
+   height:50px;
+   color:black;
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+}
+/*-------footer---------*/
+.footer-grid .items a{
+  text-decoration: none;
+  color:white;
+ 
+
+}
+.footer-grid .items p{
+   margin-bottom: 20px;
+}
+.footer{
+
+   padding:80px 10% 40px 10%;
+   color: white;
+   background-color:black;
+}
+.footer-grid {
+    margin-top:50px;
+     display:flex;
+     flex-direction:row;
+     justify-content: space-between;
+     
+
+ }
+ /*-------calendar--------*/
+ .calendar{
+   padding:80px 10% 40px 10%;
+ }
+ .calendar-grid .items{
+   display: grid;
+   grid-template-rows: repeat(auto, 1fr);
+   grid-gap: 15px;
+ }
+ .calendar-grid .fontbold{
+   text-transform: uppercase;
+   letter-spacing:-1px;
+   padding:10px 0 10px 0;
+   font-weight: 900;  
+ }
+
+ .calendar h1{
+    padding-bottom:10px;
+   margin-bottom: 20px;
+   border-bottom:1px solid rgba(14, 12, 12, 0.685);
+ }
+ .calendar-grid .items>h2{
+    padding:10px 0 10px 0;
+ }
+ .calendar-subgrid{
+   padding:10px;
+   display:grid;
+   grid-template-columns:100px 1fr 1fr ;
+   box-shadow: -3px 3px #000;
+   border:1px solid rgba(14, 12, 12, 0.685);
+   grid-gap:4%
+ }
+
+ .calendar-subgrid button{
+    width:100%;
+    background-color: white;
+    padding:20px
+ }
+
+ .calendar-subgrid div:nth-of-type(3) p{
+   padding:10px 0 10px 0;
+
+ }
+
+ .agree a{
+    color:black;
+ }
+
+ .agree{
+   font-size:x-small
+ }
+
+/*---------About------*/
+
+.about{
+   padding:80px 10% 20px 10%;
+
+}
+
+.about .items{
+   padding:50px 0 0 0;
+   display: grid;
+   grid-template-columns:25% 75% ;
+}
+.about .items:nth-of-type(1) img{
+   width:100%
+}
+
+.about img{
+   width:40%;
+   grid-column: 2/3;
+   -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  float:left;
+  margin-right:2%
+}
+
+.about-subitems h3,.about-subitems p{
+padding-bottom:10px;
+
+}
+.about-subitems h3{
+   text-transform: uppercase;
+   
+   }
+
+}
+/* for screen smaller than 768px ------------------------------*/
+
+@media all and  (min-width: 800px){
+   /*----------Index.html------------------------------------------*/
+   /*------Header ----*/
+   .header {
+       height: 255px;
+       width:100%;
+       background-image:url(https://www.barcelonacodeschool.com/files/pics/cur_files/squares.svg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+   }
+   
+    .header h1 a{
+    position: absolute;
+      top:100px;
+       left: 10%;  
+       text-decoration: none;
+       color: black;
+       font-size: 0.8em;
+    } 
+   
+    .fontbold{
+      font-weight: bold
+    }
+   
+   /*------navbar----*/
+   
+   
+   .navbar{
+      position: sticky;
+      top: 0px;
+      z-index:2
+   }
+    .card{
+       float:left;
+       width: 25%;
+       margin: 0 0 0 0;
+       text-align: center;
+       background-color:black;
+       position: -webkit-sticky;
+       padding-top: 15px;
+       padding-bottom: 15px; 
+    } 
+   
+    .card a{    
+       text-decoration: none;
+      color:white;}
+   
+   
+   /*------contact info ---------*/
+   
+    .contact_info {
+        padding:0 10% 0 10%;
+        margin-top:80px;
+        margin-bottom:30px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    iframe{
+       width:100%
+    }
+    .rightpart_contactinfo{
+       width: 50%
+    }
+    .contact_info p{
+       margin-bottom:25px;
+       color: black;
+    }
+    .contact_info p a{
+      color:rgba(14, 12, 12, 0.685);
+      margin-right: 5px;
+   }
+   .contact_info p:nth-of-type(3) a{
+      background-color: yellow;
+   }
+   
+   .contact_info button{
+      padding:10px;
+      border:solid black 1px;
+      background-color:white
+   }
+   
+   /*---------careeroptions AND differenecs ---------*/
+   .careeroptions,.differences{
+   
+      padding:80px 10% 40px 10%;
+      color: white;
+      background-color:black;
+   }
+    .careeroptions-grid,.differences-grid {
+       margin-top:50px;
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-start;
+        
+   
+    }
+    .items h4{
+      padding-bottom:40px
+    }
+    .items{
+      padding-right:2%;
+    }
+   /*--------study plan--------*/
+   .studyplan{
+      padding:40px 10% 20px 10%;
+   }
+   
+   
+   .studyplan h3{
+      margin:10px 0 10px 0;
+      border-bottom:black 1px solid
+   }
+   .studyplan-grid{
+      margin-top:40px;
+      display: grid;
+      grid-template-rows: repeat(3,1fr);
+      grid-gap:15px;
+   }
+   .studyplan-grid .items{
+      box-shadow: -3px 3px #000;
+      border:1px solid rgba(14, 12, 12, 0.685);
+      padding:20px 20px 20px 20px;
+   
+   
+   }
+   .studyplan-subgrid {
+      display:grid;
+      grid-template-columns: repeat(2,minmax(auto,1fr));
+      
+   
+   }
+   
+   .studyplan-grid a{
+      color:rgba(14, 12, 12, 0.685);
+   }
+   .studyplan-grid p{
+      color:rgba(14, 12, 12, 0.685);
+   }
+   
+   .sub-items *{
+      padding:10px 0 10px 0;
+   }
+   
+   
+   /*---------partners-------*/
+   .partners{
+      padding:20px 10% 20px 10%;
+   
+   }
+   .partners h4{
+      padding-bottom:40px
+   
+   }
+   
+   
+   .partners img{
+      width:80px;
+      height:50px;
+      color:black;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+   }
+   /*-------footer---------*/
+   .footer-grid .items a{
+     text-decoration: none;
      color:white;
-     background-color:black;
- }
-
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
+    
+   
+   }
+   .footer-grid .items p{
+      margin-bottom: 20px;
+   }
+   .footer{
+   
+      padding:80px 10% 40px 10%;
+      color: white;
+      background-color:black;
+   }
+   .footer-grid {
+       margin-top:50px;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        
+   
+    }
+    /*-------calendar--------*/
+    .calendar{
+      padding:80px 10% 40px 10%;
+    }
+    .calendar-grid .items{
+      display: grid;
+      grid-template-rows: repeat(auto, 1fr);
+      grid-gap: 15px;
+    }
+    .calendar-grid .fontbold{
+      text-transform: uppercase;
+      letter-spacing:-1px;
+      padding:10px 0 10px 0;
+      font-weight: 900;  
+    }
+   
+    .calendar h1{
+       padding-bottom:10px;
+      margin-bottom: 20px;
+      border-bottom:1px solid rgba(14, 12, 12, 0.685);
+    }
+    .calendar-grid .items>h2{
+       padding:10px 0 10px 0;
+    }
+    .calendar-subgrid{
+      padding:10px;
+      display:grid;
+      grid-template-columns:100px 1fr 1fr ;
+      box-shadow: -3px 3px #000;
+      border:1px solid rgba(14, 12, 12, 0.685);
+      grid-gap:4%
+    }
+   
+    .calendar-subgrid button{
+       width:100%;
+       background-color: white;
+       padding:20px
+    }
+   
+    .calendar-subgrid div:nth-of-type(3) p{
+      padding:10px 0 10px 0;
+   
+    }
+   
+    .agree a{
+       color:black;
+    }
+   
+    .agree{
+      font-size:x-small
+    }
+   
+   /*---------About------*/
+   
+   .about{
+      padding:80px 10% 20px 10%;
+   
+   }
+   
+   .about .items{
+      padding:50px 0 0 0;
+      display: grid;
+      grid-template-columns:25% 75% ;
+   }
+   .about .items:nth-of-type(1) img{
+      width:100%
+   }
+   
+   .about img{
+      width:40%;
+      grid-column: 2/3;
+      -webkit-filter: grayscale(100%);
+     filter: grayscale(100%);
+     float:left;
+     margin-right:2%
+   }
+   
+   .about-subitems h3,.about-subitems p{
+   padding-bottom:10px;
+   
+   }
+   .about-subitems h3{
+      text-transform: uppercase;
+      
+      }
+}
